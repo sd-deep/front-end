@@ -6,7 +6,8 @@ body {
   padding: 0; }
 
 .container {
-  display: block;  
+  display: flex;
+  flex-direction: column;  
   margin: 5vw; }
 
 .banner .card {
@@ -14,7 +15,8 @@ body {
   border: 1px solid #2c2c2c;
   border-radius: 10px;
   box-shadow: 0px 3px 20px 2px #35eea4;
-  display: block;
+  display: flex;
+  flex-direction: column;
   }
   .banner .card .heading {
     color: #35eea4;
@@ -46,23 +48,24 @@ body {
       box-shadow: 0 3px 20px 0 #35eea4; }
 
 .row {
-  display: block;
+  display: flex;
+  flex-direction: row;
+  margin-top: 5vw;
+  
+ }
 
-  margin-top: 5vw; }
-
-  .row .my-image {
+  .my-image {
     border: 1px solid #35eea4;
     border-radius: 5px;
     box-shadow: 0px 3px 20px 2px #2c2c2c;
-    width: 20vw;
-    float: right;
+    width: 30vw;
+    
   }
 
 .paragraph {
-  float: left;
   color: #2c2c2c;
   font-family: "Istok Web", sans-serif;
-  width: 60vw;
+  margin : 1vw;
 }
 
 .icon-group {
@@ -71,4 +74,32 @@ body {
     margin-right: 2vw;
     width: 5vw; }
 
+@media only screen and (max-width: 768px) and (min-width :480px){
 
+  .row{
+    align-items: center;
+    flex-direction: column;
+    
+  }
+  .row .image{
+    order: -1; 
+    justify-content: center;
+  }
+  .my-image{
+    width:50vw; 
+}
+}
+@media only screen and (max-width:480px){
+   
+      .row{
+        flex-direction: column;  
+        align-items: center;   
+        
+      }
+      .row .image{
+        order: -1; 
+      }
+      .my-image{
+        width:50vw; 
+    }      
+}
